@@ -1,4 +1,6 @@
-﻿namespace Classes
+﻿using System;
+
+namespace Classes
 {
     public class Person
     {
@@ -11,11 +13,12 @@
         /// This method is used to simply introduce yourself to another Person
         /// </summary>
         /// <param name="to"></param>
-        public void Introduce(string to)
-        {
-            // cw {TAB} => System.Console.WriteLine(........)
-            System.Console.WriteLine("Hi {0}, I am {1}", to, Name);
-        }
+        public void Introduce(string to) =>
+           // cw {TAB} => System.Console.WriteLine(........)
+           // Using the Quick Actions Shortcut {CTRL} + .
+           //    you can add the System Namespace to the top of the file
+           //    and shortcut the Console class.
+           Console.WriteLine("Hi {0}, I am {1}", to, Name);
 
         /// <summary>
         /// This Function Parses a string and converts it to a person object.
