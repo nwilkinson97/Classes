@@ -24,8 +24,10 @@
         /// <returns></returns>
         public static Person Parse(string personName)
         {
-            var person = new Person();
-            person.Name = personName;
+            var person = new Person
+            {
+                Name = personName
+            };
 
             return person;
         }
@@ -49,8 +51,10 @@
          */
         static void Main(string[] args)
         {
-            var person = new Person();
-            person.Name = "Thing 1";
+            var person = new Person
+            {
+                Name = "Thing 1"
+            };
             person.Introduce("Thing 2");
 
             //  Note:  The Parse Method cannot be called until an instance of the Perosn Class can 
