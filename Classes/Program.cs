@@ -16,6 +16,8 @@
         static void Main(string[] args)
         {
             var person = new Person();
+            person.Name = "Thing 1";
+            person.Introduce("Thing 2");
         }
     }
 }
