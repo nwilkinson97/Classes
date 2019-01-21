@@ -2,14 +2,26 @@
 {
     public class Person
     {
+        /// <summary>
+        /// This field contains the name of the person assigned to the class
+        /// </summary>
         public string Name;
 
+        /// <summary>
+        /// This method is used to simply introduce yourself to another Person
+        /// </summary>
+        /// <param name="to"></param>
         public void Introduce(string to)
         {
             // cw {TAB} => System.Console.WriteLine(........)
             System.Console.WriteLine("Hi {0}, I am {1}", to, Name);
         }
 
+        /// <summary>
+        /// This Function Parses a string and converts it to a person object.
+        /// </summary>
+        /// <param name="personName">Argument used to Define the Name of the Person Object</param>
+        /// <returns></returns>
         public static Person Parse(string personName)
         {
             var person = new Person();
