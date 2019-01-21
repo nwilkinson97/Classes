@@ -10,6 +10,14 @@
             System.Console.WriteLine("Hi {0}, I am {1}", to, Name);
         }
 
+        public Person Parse(string personName)
+        {
+            var person = new Person();
+            person.Name = personName;
+
+            return person;
+        }
+
     }
 
     class Program
