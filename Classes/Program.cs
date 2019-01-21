@@ -50,6 +50,9 @@
             //  on the line where we create an instance of the Person Class by using the Parse Function.
             var personKing = Person.Parse("King Thing");
             personKing.Introduce("Chocolate Thunda");
+
+            //  NOTE:  The difference between a Function and a Method can be simplified down to the fact
+            //  that a Method will have no return value and a Function will always return some type of value.
         }
     }
 }
