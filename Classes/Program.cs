@@ -9,6 +9,7 @@
     {
         static void Main(string[] args)
         {
+            var person = new Person();
         }
     }
 }
