@@ -10,7 +10,7 @@
             System.Console.WriteLine("Hi {0}, I am {1}", to, Name);
         }
 
-        public Person Parse(string personName)
+        public static Person Parse(string personName)
         {
             var person = new Person();
             person.Name = personName;
@@ -40,6 +40,16 @@
             var person = new Person();
             person.Name = "Thing 1";
             person.Introduce("Thing 2");
+
+            //  Note:  The Parse Method cannot be called until an instance of the Perosn Class can 
+            //  be used.  This defeats the person of parsing a Person Object directly from a string.
+            //  The reason we cannot see the Parse method is that it is not a static function.  Static
+            //  Methods and Functions can be seen before an instance has been created.  
+
+            //  If you remove the keyword "static" from the Method Introduce you will see an error 
+            //  on the line where we create an instance of the Person Class by using the Parse Function.
+            var personKing = Person.Parse("King Thing");
+            personKing.Introduce("Chocolate Thunda");
         }
     }
 }
